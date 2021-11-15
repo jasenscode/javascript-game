@@ -1,0 +1,17 @@
+#bomb {
+  font-size: 2rem;
+  position: absolute;
+  right: 0%;
+  animation: side-scroll 2s infinite;
+  animation-timing-function: linear;
+  left: -8px;
+}
+
+@keyframes side-scroll {
+  0% {
+    left: 260px;
+  }
+  100% {
+    left: -8px;
+  }
+}

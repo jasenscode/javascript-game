@@ -1,0 +1,19 @@
+@import "./_typography.scss";
+@import "./_variables.scss";
+
+.btn {
+  background: $primary-color;
+  color: $font-color;
+  font-family: $main-font;
+  display: block;
+  margin: auto;
+  padding: 1em;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: $font-color;
+  color: $primary-color;
+  transition: 0.2s;
+}

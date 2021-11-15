@@ -1,0 +1,12 @@
+.lane {
+  background: lightblue;
+  border: 1px solid lightgray;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#bottom-lane {
+  position: relative;
+}

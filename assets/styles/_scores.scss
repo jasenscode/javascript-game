@@ -1,0 +1,11 @@
+@import "./_typography.scss";
+@import "./_variables.scss";
+
+#scores {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  &__current {
+    margin-bottom: 1.5rem;
+  }
+}

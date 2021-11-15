@@ -1,0 +1,22 @@
+@import "assets/styles/_variables.scss";
+@import "assets/styles/_typography.scss";
+@import "assets/styles/_button.scss";
+@import "assets/styles/_header.scss";
+@import "assets/styles/_scores.scss";
+@import "assets/styles/_game-screen.scss";
+@import "assets/styles/_frog.scss";
+@import "assets/styles/_bomb.scss";
+@import "assets/styles/_lane.scss";
+@import "assets/styles/_footer.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-color;
+  font-family: $main-font;
+  padding: 25px;
+}
