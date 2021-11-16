@@ -25,6 +25,8 @@ p {
 }
 
 .btn-jump {
+  background: #9897fe;
+  color: #faf9f6;
   font-family: "Press Start 2P", cursive;
   display: block;
   margin: auto;
