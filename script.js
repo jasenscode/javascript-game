@@ -65,12 +65,11 @@ const jumpBtn = document.querySelector("#jump-btn");
 // console.log(jumpBtn);
 // console.log(character);
 
-// // jumpBtn.addEventListener("click", () => {
-// //     if(character.)
-// //   character.classList.add("animate");
-// // });
+jumpBtn.addEventListener("click", () => {
+  character.classList.add("animate-character");
+});
 
-// // get date for footer
+// get date for footer
 
-// const getYear = new Date();
-// document.querySelector("#current-year").innerHTML = getYear.getFullYear();
+const getYear = new Date();
+document.querySelector("#current-year").innerHTML = getYear.getFullYear();

@@ -39,9 +39,21 @@ p {
 
 #start-reset {
   display: flex;
+  justify-content: space-between;
+  margin: auto;
   margin-bottom: 3rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .btn-jump {
+    width: 40%;
+  }
+
+  #start-reset {
+    margin-bottom: 0;
+    width: 40%;
+  }
+}
 .btn-clicked {
   background-color: #faf9f6;
   color: #9897fe;
@@ -97,6 +109,12 @@ p {
   position: relative;
 }
 
+@media screen and (min-width: 1024px) {
+  #screen {
+    width: 40%;
+    height: 200px;
+  }
+}
 .character {
   font-size: 3rem;
   animation-timing-function: linear;
@@ -108,14 +126,14 @@ p {
     bottom: 0px;
   }
   50% {
-    bottom: 40px;
+    bottom: 50px;
   }
   100% {
     bottom: 0px;
   }
 }
-.animate {
-  transform: scale(2);
+.animate-character {
+  animation: jump 0.7s;
 }
 
 #bomb {
@@ -134,6 +152,10 @@ p {
     left: -8px;
   }
 }
+.animate-bomb {
+  animation: side-scroll 2s infinite;
+}
+
 .lane {
   background: lightblue;
   border: 1px solid lightgray;
@@ -163,6 +185,11 @@ p {
   font-size: 0.8rem;
 }
 
+@media screen and (min-width: 1024px) {
+  #footer {
+    height: auto;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -173,10 +200,19 @@ body {
   background-color: #9897fe;
   font-family: "Press Start 2P", cursive;
   padding: 25px;
-  height: 100vh;
 }
 
 .game-desc {
   text-align: center;
   line-height: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 0px;
+  }
+
+  .game-desc {
+    margin-bottom: 1.5rem;
+  }
 }

@@ -2,7 +2,6 @@
   font-size: 2rem;
   position: absolute;
   right: 0%;
-  // animation: side-scroll 2s infinite;
   animation-timing-function: linear;
   right: 0px;
 }
@@ -14,4 +13,8 @@
   100% {
     left: -8px;
   }
+}
+
+.animate-bomb {
+  animation: side-scroll 2s infinite;
 }

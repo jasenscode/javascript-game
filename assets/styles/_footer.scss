@@ -9,3 +9,9 @@
   height: 15vh;
   font-size: 0.8rem;
 }
+
+@media screen and (min-width: 1024px) {
+  #footer {
+    height: auto;
+  }
+}

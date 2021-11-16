@@ -19,10 +19,19 @@ body {
   background-color: $primary-color;
   font-family: $main-font;
   padding: 25px;
-  height: 100vh;
 }
 
 .game-desc {
   text-align: center;
   line-height: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 0px;
+  }
+
+  .game-desc {
+    margin-bottom: 1.5rem;
+  }
 }

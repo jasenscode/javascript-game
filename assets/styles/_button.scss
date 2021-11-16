@@ -28,7 +28,20 @@
 
 #start-reset {
   display: flex;
+  justify-content: space-between;
+  margin: auto;
   margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn-jump {
+    width: 40%;
+  }
+
+  #start-reset {
+    margin-bottom: 0;
+    width: 40%;
+  }
 }
 
 // visual indicator when button is clicked

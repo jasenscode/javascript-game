@@ -15,3 +15,10 @@
   position: relative;
 }
 // will make this position relative once collision works
+
+@media screen and (min-width: 1024px) {
+  #screen {
+    width: 40%;
+    height: 200px;
+  }
+}
