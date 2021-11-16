@@ -32,10 +32,11 @@ jumpBtn.addEventListener("click", handleJump);
 // function to calculate position of bomb
 const getPositions = setInterval(() => {
   if (character.offsetTop >= 112 && bomb.offsetLeft <= 50) {
-    alert("u lose");
+    bomb.classList.remove("animate-bomb");
+    if (currentScore.innerHTML > highScore.innerHTML) {
+      highScore.innerHTML = currentScore.innerHTML;
+    }
   }
-  //   console.log(bomb.offsetLeft, bomb.offsetTop);
-  //   console.log(character.offsetLeft, character.offsetTop);
 }, 10);
 
 // function to check if bomb has reached end of animation without hitting character
