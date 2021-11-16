@@ -2,9 +2,9 @@
   font-size: 2rem;
   position: absolute;
   right: 0%;
-  animation: side-scroll 2s infinite;
+  // animation: side-scroll 2s infinite;
   animation-timing-function: linear;
-  left: -8px;
+  right: 0px;
 }
 
 @keyframes side-scroll {

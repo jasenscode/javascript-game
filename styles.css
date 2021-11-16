@@ -18,15 +18,33 @@ p {
   font-family: "Press Start 2P", cursive;
   display: block;
   margin: auto;
+  margin-bottom: 20px;
   padding: 1em;
   border: 1px solid white;
   cursor: pointer;
 }
 
-.btn:hover {
+.btn-jump {
+  background: #9897fe;
+  color: #faf9f6;
+  font-family: "Press Start 2P", cursive;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 1em;
+  border: 1px solid white;
+  width: 90%;
+  cursor: pointer;
+}
+
+#start-reset {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.btn-clicked {
   background-color: #faf9f6;
   color: #9897fe;
-  transition: 0.2s;
 }
 
 h1,
@@ -66,7 +84,7 @@ p {
 }
 
 #screen {
-  width: 300px;
+  width: 90%;
   height: 200px;
   background-color: #faf9f6;
   margin: auto;
@@ -79,26 +97,33 @@ p {
   position: relative;
 }
 
-.frog {
-  color: #61ff00;
-  font-size: 2rem;
+.character {
+  font-size: 3rem;
+  animation-timing-function: linear;
+  position: absolute;
 }
 
-#frog-top {
-  display: none;
+@keyframes jump {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 40px;
+  }
+  100% {
+    bottom: 0px;
+  }
 }
-
-.hideFrog {
-  display: none;
+.animate {
+  transform: scale(2);
 }
 
 #bomb {
   font-size: 2rem;
   position: absolute;
   right: 0%;
-  animation: side-scroll 2s infinite;
   animation-timing-function: linear;
-  left: -8px;
+  right: 0px;
 }
 
 @keyframes side-scroll {
@@ -115,7 +140,7 @@ p {
   height: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 #bottom-lane {
@@ -131,9 +156,11 @@ p {
 
 #footer {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   padding: 15px;
+  height: 15vh;
+  font-size: 0.8rem;
 }
 
 * {
@@ -146,4 +173,10 @@ body {
   background-color: #9897fe;
   font-family: "Press Start 2P", cursive;
   padding: 25px;
+  height: 100vh;
+}
+
+.game-desc {
+  text-align: center;
+  line-height: 1.5rem;
 }

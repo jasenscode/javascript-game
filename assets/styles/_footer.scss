@@ -3,7 +3,9 @@
 
 #footer {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   padding: 15px;
+  height: 15vh;
+  font-size: 0.8rem;
 }

@@ -1,14 +1,31 @@
 // "use strict";
 
-// const bomb = document.querySelector("#bomb");
-// const frog = document.querySelectorAll(".frog");
-// const topLane = document.querySelector("#top-lane");
-// const bottomLane = document.querySelector("#bottom-lane");
+// Selectors
+const bomb = document.querySelector("#bomb");
+const character = document.querySelector(".character");
 // const bombPosition = bomb.getBoundingClientRect();
-// // const frogPosition = frog.getBoundingClientRect();
-// const jumpBtn = document.querySelector("#jump-btn");
+// const characterPosition = character.getBoundingClientRect();
+const jumpBtn = document.querySelector("#jump-btn");
 
-// // if (bombPosition.right >= 292) {
+// press start adds animation class to bomb
+//// this adds animation class to bomb
+//// makes sure score is zero but retains high score
+
+// function to make character jump
+//// adds animate class to the character
+
+// function to calculate position of bomb
+
+// function to check if bomb has reached end of animation without hitting character
+//// adds one to score
+//// if it does collide then score is added to high score if it is higher
+
+// function to reset the game
+//// removes animation class from bomb
+//// reset score to zero
+//// reset high score to zero
+
+// // if (bombPosition.right >= 22) {
 // //   alert("it has a frog!");
 // // }
 
@@ -37,9 +54,23 @@
 // // });
 
 // const bombPos = document.querySelector("#bomb");
-// // console.log(bombPos.offsetLeft, bombPos.offsetTop);
+// // // console.log(bombPos.offsetLeft, bombPos.offsetTop);
 
-// // USE THIS TO CHECK POSITION OF BOMB
+// // // USE THIS TO CHECK POSITION OF BOMB
 // // const checkBombPosition = setInterval(() => {
 // //   console.log(bombPos.offsetLeft);
-// // }, 250);
+// // }, 50);
+
+// console.log(typeof bombPos.offsetLeft);
+// console.log(jumpBtn);
+// console.log(character);
+
+// // jumpBtn.addEventListener("click", () => {
+// //     if(character.)
+// //   character.classList.add("animate");
+// // });
+
+// // get date for footer
+
+// const getYear = new Date();
+// document.querySelector("#current-year").innerHTML = getYear.getFullYear();
