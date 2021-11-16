@@ -3,16 +3,31 @@
 // Selectors
 const bomb = document.querySelector("#bomb");
 const character = document.querySelector(".character");
+const jumpBtn = document.querySelector("#jump-btn");
+const startBtn = document.querySelector("#start-btn");
+const resetBtn = document.querySelector("#reset-btn");
+const currentScore = document.querySelector("#current-score");
+const highScore = document.querySelector("#high-score");
 // const bombPosition = bomb.getBoundingClientRect();
 // const characterPosition = character.getBoundingClientRect();
-const jumpBtn = document.querySelector("#jump-btn");
 
-// press start adds animation class to bomb
-//// this adds animation class to bomb
-//// makes sure score is zero but retains high score
+// function to start game
+const handleStart = () => {
+  bomb.classList.add("animate-bomb");
+  currentScore.innerHTML = "0";
+};
+
+startBtn.addEventListener("click", handleStart);
 
 // function to make character jump
-//// adds animate class to the character
+const handleJump = () => {
+  character.classList.add("animate-character");
+  setTimeout(() => {
+    character.classList.remove("animate-character");
+  }, 700);
+};
+
+jumpBtn.addEventListener("click", handleJump);
 
 // function to calculate position of bomb
 
@@ -20,7 +35,14 @@ const jumpBtn = document.querySelector("#jump-btn");
 //// adds one to score
 //// if it does collide then score is added to high score if it is higher
 
-// function to reset the game
+// function to reset the game - HANDLE RESET
+const handleReset = () => {
+  bomb.classList.remove("animate-bomb");
+  currentScore.innerHTML = "0";
+  highScore.innerHTML = "0";
+};
+
+resetBtn.addEventListener("click", handleReset);
 //// removes animation class from bomb
 //// reset score to zero
 //// reset high score to zero
@@ -29,10 +51,10 @@ const jumpBtn = document.querySelector("#jump-btn");
 // //   alert("it has a frog!");
 // // }
 
-// // const checkBombPosition = setInterval(() => {
-// //   console.log(bombPosition.right);
-// //   console.log(bombPosition.left);
-// // }, 500);
+// const checkBombPosition = setInterval(() => {
+//   console.log(bombPosition.right);
+//   console.log(bombPosition.left);
+// }, 500);
 
 // // bottomLane.contains(frog) &&
 
@@ -40,36 +62,18 @@ const jumpBtn = document.querySelector("#jump-btn");
 // //   console.log(bombPosition.left);
 // // });
 
-// // make jump button move frog between divs
-// // need to add forEach
-
-// // jumpBtn.addEventListener("click", () => {
-// //   frog.forEach((frog) => {
-// //     if (frog.style.display === "block") {
-// //       frog.style.display = "none";
-// //     } else {
-// //       frog.style.display = "block";
-// //     }
-// //   });
-// // });
-
 // const bombPos = document.querySelector("#bomb");
 // // // console.log(bombPos.offsetLeft, bombPos.offsetTop);
 
-// // // USE THIS TO CHECK POSITION OF BOMB
-// // const checkBombPosition = setInterval(() => {
-// //   console.log(bombPos.offsetLeft);
-// // }, 50);
+// USE THIS TO CHECK POSITION OF BOMB
+// const checkBombPosition = setInterval(() => {
+//   console.log(bombPos.offsetLeft);
+// }, 50);
 
 // console.log(typeof bombPos.offsetLeft);
 // console.log(jumpBtn);
 // console.log(character);
 
-jumpBtn.addEventListener("click", () => {
-  character.classList.add("animate-character");
-});
-
-// get date for footer
-
+// Add year for footer
 const getYear = new Date();
 document.querySelector("#current-year").innerHTML = getYear.getFullYear();

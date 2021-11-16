@@ -25,8 +25,6 @@ p {
 }
 
 .btn-jump {
-  background: #9897fe;
-  color: #faf9f6;
   font-family: "Press Start 2P", cursive;
   display: block;
   margin: auto;
@@ -153,20 +151,7 @@ p {
   }
 }
 .animate-bomb {
-  animation: side-scroll 2s infinite;
-}
-
-.lane {
-  background: lightblue;
-  border: 1px solid lightgray;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-#bottom-lane {
-  position: relative;
+  animation: side-scroll 0.9s infinite;
 }
 
 h1,
