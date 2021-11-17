@@ -7,7 +7,6 @@
   font-family: $main-font;
   display: block;
   margin: auto;
-  margin-bottom: 20px;
   padding: 1em;
   border: 1px solid white;
   cursor: pointer;
@@ -29,8 +28,9 @@
 #start-reset {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
   margin: auto;
-  margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -39,7 +39,6 @@
   }
 
   #start-reset {
-    margin-bottom: 0;
     width: 40%;
   }
 }
