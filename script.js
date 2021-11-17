@@ -21,10 +21,12 @@ startBtn.addEventListener("click", handleStart);
 
 // function to make character jump
 const handleJump = () => {
-  character.classList.add("animate-character");
-  setTimeout(() => {
-    character.classList.remove("animate-character");
-  }, 700);
+  if (!character.classList.contains("animate-character")) {
+    character.classList.add("animate-character");
+    setTimeout(() => {
+      character.classList.remove("animate-character");
+    }, 700);
+  }
 };
 
 jumpBtn.addEventListener("click", handleJump);
