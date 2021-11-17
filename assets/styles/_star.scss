@@ -1,9 +1,8 @@
 #star {
   font-size: 2rem;
   position: absolute;
-  right: -25%;
+  right: -15%;
   bottom: 65%;
-  animation: side-scroll 2.5s infinite;
   animation-timing-function: linear;
   color: #f6be00;
 }
@@ -16,6 +15,8 @@
     left: -15%;
   }
 }
+
+// add animation class
 
 .animate-star {
   animation: side-scroll 2s infinite;
