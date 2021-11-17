@@ -107,6 +107,7 @@ p {
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 1024px) {
@@ -139,14 +140,13 @@ p {
 #bomb {
   font-size: 2rem;
   position: absolute;
-  right: 0%;
+  right: 0;
   animation-timing-function: linear;
-  right: 0px;
 }
 
 @keyframes side-scroll {
   0% {
-    left: 260px;
+    left: 100%;
   }
   100% {
     left: -8px;
