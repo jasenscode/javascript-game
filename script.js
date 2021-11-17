@@ -3,6 +3,7 @@
 // Selectors
 const bomb = document.querySelector("#bomb");
 const character = document.querySelector("#character");
+const star = document.querySelector("#star");
 const jumpBtn = document.querySelector("#jump-btn");
 const startBtn = document.querySelector("#start-btn");
 const resetBtn = document.querySelector("#reset-btn");
@@ -26,20 +27,42 @@ const handleJump = () => {
     setTimeout(() => {
       character.classList.remove("animate-character");
     }, 700);
+  } else if (character.classList.contains("animate-character")) {
+    character.classList.add("double-jump");
+    setTimeout(() => {
+      character.classList.remove("double-jump");
+    }, 500);
   }
 };
 
 jumpBtn.addEventListener("click", handleJump);
 
-// function to calculate position of bomb
-const getPositions = setInterval(() => {
-  if (character.offsetTop >= 112 && bomb.offsetLeft <= 50) {
+// function to check collision of character and bomb
+const getBombCollision = setInterval(() => {
+  if (character.offsetTop >= 112 && bomb.offsetLeft < 50 && bomb.offsetLeft > 8) {
     bomb.classList.remove("animate-bomb");
-    if (currentScore.innerHTML > highScore.innerHTML) {
+    console.log(currentScore.innerHTML, highScore.innerHTML);
+    console.log(currentScore.innerHTML > highScore.innerHTML);
+    if (parseInt(currentScore.innerHTML) > parseInt(highScore.innerHTML)) {
       highScore.innerHTML = currentScore.innerHTML;
     }
   }
 }, 10);
+
+// function to check collision of character and star
+// const getStarCollision = setInterval(() => {
+//   if (character.offsetTop >= 68 && character.offsetTop <= 100 && star.offsetLeft < 50 && star.offsetLeft > 8) {
+//     // if (currentScore.innerHTML > highScore.innerHTML) {
+//     //   highScore.innerHTML = currentScore.innerHTML;
+//     // }
+//   }
+// }, 10);
+
+// const getStarCollision = setInterval(() => {
+//   if (character.offsetTop >= 68 && character.offsetTop <= 100 && star.offsetLeft < 50 && star.offsetLeft > 8) {
+//     star.classList.remove("animate-star");
+//   }
+// }, 10);
 
 // function to check if bomb has reached end of animation without hitting character
 
