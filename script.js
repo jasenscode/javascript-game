@@ -41,8 +41,6 @@ jumpBtn.addEventListener("click", handleJump);
 const getBombCollision = setInterval(() => {
   if (character.offsetTop >= 112 && bomb.offsetLeft < 50 && bomb.offsetLeft > 8) {
     bomb.classList.remove("animate-bomb");
-    console.log(currentScore.innerHTML, highScore.innerHTML);
-    console.log(currentScore.innerHTML > highScore.innerHTML);
     if (parseInt(currentScore.innerHTML) > parseInt(highScore.innerHTML)) {
       highScore.innerHTML = currentScore.innerHTML;
     }

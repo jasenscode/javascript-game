@@ -1,0 +1,22 @@
+#star {
+  font-size: 2rem;
+  position: absolute;
+  right: -25%;
+  bottom: 65%;
+  animation: side-scroll 2.5s infinite;
+  animation-timing-function: linear;
+  color: #f6be00;
+}
+
+@keyframes side-scroll {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -15%;
+  }
+}
+
+.animate-star {
+  animation: side-scroll 2s infinite;
+}
