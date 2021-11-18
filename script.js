@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 // Selectors
 const bomb = document.querySelector("#bomb");
@@ -32,9 +32,6 @@ const handleJump = () => {
       character.classList.remove("double-jump");
     }, 500);
   }
-  if (!star.classList.contains("animate-star")) {
-    star.classList.add("animate-star");
-  }
 };
 
 jumpBtn.addEventListener("click", handleJump);
@@ -54,9 +51,12 @@ const getBombCollision = setInterval(() => {
 const getStarCollision = setInterval(() => {
   let newScore;
   if (character.offsetTop >= 50 && character.offsetTop <= 70 && star.offsetLeft < 50 && star.offsetLeft > 8) {
-    newScore = parseInt(currentScore.innerHTML) + 2;
+    newScore = parseInt(currentScore.innerHTML) + 1;
     currentScore.innerHTML = newScore;
     star.classList.remove("animate-star");
+    setTimeout(() => {
+      star.classList.add("animate-star");
+    }, 1500);
   }
 }, 10);
 
