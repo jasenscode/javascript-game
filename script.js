@@ -9,6 +9,7 @@ const startBtn = document.querySelector("#start-btn");
 const resetBtn = document.querySelector("#reset-btn");
 const currentScore = document.querySelector("#current-score");
 const highScore = document.querySelector("#high-score");
+const selectBody = document.body;
 
 // function to start game
 const handleStart = () => {
@@ -34,7 +35,15 @@ const handleJump = () => {
   }
 };
 
+// click event jump functionality
 jumpBtn.addEventListener("click", handleJump);
+
+// spacebar jump functionality
+selectBody.addEventListener("keydown", (event) => {
+  if (event.code === "Space") {
+    handleJump();
+  }
+});
 
 // function to check collision of character and bomb
 const getBombCollision = setInterval(() => {
