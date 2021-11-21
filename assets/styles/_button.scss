@@ -35,16 +35,16 @@
 
 @media screen and (min-width: 1024px) {
   .btn-jump {
-    width: 40%;
+    width: 30%;
   }
 
   #start-reset {
     width: 40%;
   }
-}
 
-// visual indicator when button is clicked
-.btn-clicked {
-  background-color: $font-color;
-  color: $primary-color;
+  .btn:hover {
+    background-color: $font-color;
+    color: $primary-color;
+    transition: 0.2s;
+  }
 }

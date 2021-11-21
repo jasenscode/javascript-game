@@ -46,11 +46,17 @@ p {
 
 @media screen and (min-width: 1024px) {
   .btn-jump {
-    width: 40%;
+    width: 30%;
   }
 
   #start-reset {
     width: 40%;
+  }
+
+  .btn:hover {
+    background-color: #faf9f6;
+    color: #9897fe;
+    transition: 0.2s;
   }
 }
 .btn-clicked {
@@ -116,7 +122,7 @@ p {
 
 @media screen and (min-width: 1024px) {
   #screen {
-    width: 40%;
+    width: 30%;
     height: 200px;
   }
 }
@@ -232,7 +238,7 @@ body {
 .game-desc {
   text-align: center;
   line-height: 1.5rem;
-  padding: 1.5rem;
+  padding: 0.75rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {

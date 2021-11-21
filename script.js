@@ -67,7 +67,7 @@ const setCurrentScore = () => {
 
 bomb.addEventListener("animationiteration", setCurrentScore);
 
-// function to reset the game - HANDLE RESET
+// function to reset the game
 const handleReset = () => {
   bomb.classList.remove("animate-star");
   bomb.classList.remove("animate-bomb");
