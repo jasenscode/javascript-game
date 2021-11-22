@@ -39,11 +39,13 @@ const handleJump = () => {
 jumpBtn.addEventListener("click", handleJump);
 
 // spacebar jump functionality
-selectBody.addEventListener("keydown", (event) => {
+const handleSpaceBar = (event) => {
   if (event.code === "Space") {
     handleJump();
   }
-});
+};
+
+selectBody.addEventListener("keydown", handleSpaceBar);
 
 // function to check collision of character and bomb
 const getBombCollision = setInterval(() => {
