@@ -2,6 +2,8 @@
 
 This is a game titled "Bomb Jump!" made using vanilla JavaScript that I built in the fourth week of the _nology bootcamp.
 
+The timeframe allowed to complete this project was one week.
+
 [Check the live demo here!](https://jasenscode.github.io/javascript-game/)
 
 ![Game screenshot](https://github.com/jasenscode/javascript-game/blob/main/assets/images/screenshot.JPG?raw=true)
