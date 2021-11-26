@@ -1,0 +1,11 @@
+.game-desc {
+  text-align: center;
+  line-height: 1.5rem;
+  padding: 0.75rem 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .game-desc {
+    margin-bottom: 1.5rem;
+  }
+}

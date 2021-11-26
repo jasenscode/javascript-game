@@ -36,7 +36,7 @@ p {
   cursor: pointer;
 }
 
-#start-reset {
+.start-reset {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,7 +49,7 @@ p {
     width: 30%;
   }
 
-  #start-reset {
+  .start-reset {
     width: 40%;
   }
 
@@ -59,11 +59,6 @@ p {
     transition: 0.2s;
   }
 }
-.btn-clicked {
-  background-color: #faf9f6;
-  color: #9897fe;
-}
-
 h1,
 h2,
 h3,
@@ -71,7 +66,7 @@ p {
   color: #faf9f6;
 }
 
-#header {
+.header {
   text-transform: uppercase;
   text-align: center;
   margin: 30px 0;
@@ -89,12 +84,12 @@ p {
   color: #faf9f6;
 }
 
-#scores {
+.scores {
   font-size: 0.8rem;
   text-align: center;
   margin-bottom: 1.5rem;
 }
-#scores__current {
+.scores__current {
   margin-bottom: 1.5rem;
 }
 
@@ -105,7 +100,7 @@ p {
   color: #faf9f6;
 }
 
-#screen {
+.screen {
   width: 90%;
   height: 200px;
   background-color: #faf9f6;
@@ -202,6 +197,17 @@ p {
   animation: side-scroll 2s infinite;
 }
 
+.game-desc {
+  text-align: center;
+  line-height: 1.5rem;
+  padding: 0.75rem 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .game-desc {
+    margin-bottom: 1.5rem;
+  }
+}
 h1,
 h2,
 h3,
@@ -209,7 +215,7 @@ p {
   color: #faf9f6;
 }
 
-#footer {
+.footer {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -218,7 +224,7 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
-  #footer {
+  .footer {
     height: auto;
   }
 }
@@ -235,18 +241,8 @@ body {
   touch-action: manipulation;
 }
 
-.game-desc {
-  text-align: center;
-  line-height: 1.5rem;
-  padding: 0.75rem 1.5rem;
-}
-
 @media screen and (min-width: 1024px) {
   body {
     padding: 0px;
-  }
-
-  .game-desc {
-    margin-bottom: 1.5rem;
   }
 }

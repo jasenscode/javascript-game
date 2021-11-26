@@ -45,7 +45,7 @@ const handleSpaceBar = (event) => {
   }
 };
 
-selectBody.addEventListener("keydown", handleSpaceBar);
+selectBody.addEventListener("keypress", handleSpaceBar);
 
 // function to check collision of character and bomb
 const getBombCollision = setInterval(() => {
@@ -89,5 +89,5 @@ const handleReset = () => {
 resetBtn.addEventListener("click", handleReset);
 
 // Add year for footer
-const getYear = new Date();
-document.querySelector("#current-year").innerHTML = getYear.getFullYear();
+const currentYear = new Date().getFullYear();
+document.querySelector("#current-year").innerHTML = currentYear;
