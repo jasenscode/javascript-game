@@ -10,6 +10,7 @@ const resetBtn = document.querySelector("#reset-btn");
 const currentScore = document.querySelector("#current-score");
 const highScore = document.querySelector("#high-score");
 const selectBody = document.body;
+const footerYear = document.querySelector("#current-year");
 
 // function to start game
 const handleStart = () => {
@@ -17,8 +18,6 @@ const handleStart = () => {
   star.classList.add("animate-star");
   currentScore.innerHTML = 0;
 };
-
-startBtn.addEventListener("click", handleStart);
 
 // function to make character jump
 const handleJump = () => {
@@ -35,9 +34,6 @@ const handleJump = () => {
   }
 };
 
-// click event jump functionality
-jumpBtn.addEventListener("click", handleJump);
-
 // spacebar jump functionality
 const handleSpaceBar = (event) => {
   if (event.code === "Space") {
@@ -45,11 +41,9 @@ const handleSpaceBar = (event) => {
   }
 };
 
-selectBody.addEventListener("keydown", handleSpaceBar);
-
 // function to check collision of character and bomb
 const getBombCollision = setInterval(() => {
-  if (character.offsetTop >= 112 && bomb.offsetLeft < 50 && bomb.offsetLeft > 8) {
+  if (character.offsetTop >= 112 && bomb.offsetLeft > 8 && bomb.offsetLeft < 50) {
     bomb.classList.remove("animate-bomb");
     star.classList.remove("animate-star");
     if (parseInt(currentScore.innerHTML) > parseInt(highScore.innerHTML)) {
@@ -61,12 +55,14 @@ const getBombCollision = setInterval(() => {
 // function to check collision of character and star
 const getStarCollision = setInterval(() => {
   let newScore;
-  if (character.offsetTop >= 50 && character.offsetTop <= 70 && star.offsetLeft < 50 && star.offsetLeft > 8) {
+  if (character.offsetTop >= 50 && character.offsetTop <= 70 && star.offsetLeft > 8 && star.offsetLeft < 50) {
     newScore = parseInt(currentScore.innerHTML) + 1;
     currentScore.innerHTML = newScore;
     star.classList.remove("animate-star");
     setTimeout(() => {
-      star.classList.add("animate-star");
+      if (bomb.classList.contains("animate-bomb")) {
+        star.classList.add("animate-star");
+      }
     }, 1500);
   }
 }, 10);
@@ -76,8 +72,6 @@ const setCurrentScore = () => {
   currentScore.innerHTML++;
 };
 
-bomb.addEventListener("animationiteration", setCurrentScore);
-
 // function to reset the game
 const handleReset = () => {
   star.classList.remove("animate-star");
@@ -86,8 +80,13 @@ const handleReset = () => {
   highScore.innerHTML = 0;
 };
 
+// eventListeners
+startBtn.addEventListener("click", handleStart);
+jumpBtn.addEventListener("click", handleJump);
+selectBody.addEventListener("keydown", handleSpaceBar);
+bomb.addEventListener("animationiteration", setCurrentScore);
 resetBtn.addEventListener("click", handleReset);
 
 // Add year for footer
 const currentYear = new Date().getFullYear();
-document.querySelector("#current-year").innerHTML = currentYear;
+footerYear.innerHTML = currentYear;
