@@ -45,7 +45,7 @@ const handleSpaceBar = (event) => {
   }
 };
 
-selectBody.addEventListener("keypress", handleSpaceBar);
+selectBody.addEventListener("keydown", handleSpaceBar);
 
 // function to check collision of character and bomb
 const getBombCollision = setInterval(() => {

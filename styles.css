@@ -116,8 +116,8 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
-  #screen {
-    width: 30%;
+  .screen {
+    width: 40%;
     height: 200px;
   }
 }
