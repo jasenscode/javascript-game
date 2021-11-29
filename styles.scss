@@ -19,12 +19,17 @@
 body {
   background-color: $primary-color;
   font-family: $main-font;
+  height: 100vh;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   touch-action: manipulation;
 }
 
 @media screen and (min-width: 1024px) {
   body {
-    padding: 0px;
+    padding: 50px;
   }
 }

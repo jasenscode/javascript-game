@@ -40,6 +40,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   padding: 1.5rem;
   margin: auto;
 }
@@ -47,10 +48,6 @@ p {
 @media screen and (min-width: 1024px) {
   .btn-jump {
     width: 30%;
-  }
-
-  .start-reset {
-    width: 40%;
   }
 
   .btn:hover {
@@ -237,12 +234,17 @@ p {
 body {
   background-color: #9897fe;
   font-family: "Press Start 2P", cursive;
+  height: 100vh;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   touch-action: manipulation;
 }
 
 @media screen and (min-width: 1024px) {
   body {
-    padding: 0px;
+    padding: 50px;
   }
 }
