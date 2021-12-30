@@ -25,4 +25,9 @@ My game started out with the idea that the user controls the character by way of
 
 I knew the hardest part of this would be to actually determine when the character and bomb had collided. As such, before I began any HTML or styling, I spent time researching ways to track the position of the two HTML elements on the screen so that I could then use this to create logic to determine what would happen when they were both in the same area of the screen at the same time.
 
-For this, I used the HTMLElement.offsetTop and HTMLElement.offsetLeft.
+For this, I used the HTMLElement.offsetTop and HTMLElement.offsetLeft. This effectively gave me a coordinate position of the objects on the game screen so I could create functions containing if/else conditions to end the game or add additional points should certain elements be in the same positions at the same time.
+
+_____
+### Future Implementations 
+
+If I were to spend more time on the game in future, I would try to implement changes to make the game more varied. This could include things such as periodically changing the animation speed of the bomb and star elements, or adding in additional point scoring conditions, for example, more bonus stars.
